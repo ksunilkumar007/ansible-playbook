@@ -1,0 +1,3 @@
+cluster_name,namespace,ip_address_pool_name,ip_addresses,l2_advertisement_name,labels_key,labels_value
+ukgcpe1,metallb-system,doc-example-l2-label,"['172.31.249.87/32']","l2advertisement-label","zone","east"
+ukgcpe2,metallb-system,doc-example-l2-label,"['172.31.250.100/30']","l2advertisement-label","zone","west"

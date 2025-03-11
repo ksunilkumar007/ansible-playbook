@@ -1,0 +1,12 @@
+apiVersion: metallb.io/v1beta1
+kind: L2Advertisement
+metadata:
+  name: {{ l2adv_name }}
+  namespace: {{ namespace }}
+spec:
+  ipAddressPoolSelectors:
+    - matchExpressions:
+        - key: {{ match_label_key }}
+          operator: In
+          values:
+            - {{ match_label_value }}

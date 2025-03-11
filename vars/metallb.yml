@@ -1,0 +1,6 @@
+---
+csv_file: "{{ playbook_dir }}/input/metallb/input.csv"  # Change as needed
+python_script: "{{ playbook_dir }}/scripts/metallb/generate_k8s_yaml.py"
+validation_script: "{{ playbook_dir }}/scripts/metallb/csv_validator.py"
+template_dir: "{{ playbook_dir }}/templates/metallb"
+output_dir: "{{ playbook_dir }}/output"

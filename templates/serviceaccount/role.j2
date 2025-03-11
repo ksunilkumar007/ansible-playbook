@@ -1,0 +1,9 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: {{ role }}
+  namespace: {{ namespace }}
+rules:
+  - apiGroups: {{ api_groups | tojson }}
+    resources: ["*"]
+    verbs: {{ verbs | tojson }}

@@ -1,0 +1,12 @@
+---
+- name: Load ServiceAccount Variables
+  include_vars: vars/metallb.yml
+  when: enable_metallb | bool
+
+- name: Include CSV Validation Task
+  include_tasks: tasks/metallb/csv_validation.yml
+  when: enable_metallb | bool
+
+- name: Include YAML Generation Task
+  include_tasks: tasks/metallb/generate_k8s.yml
+  when: enable_metallb | bool

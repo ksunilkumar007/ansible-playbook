@@ -1,0 +1,16 @@
+python3 scripts/generate_k8s_yaml.py --csv_file input/input.csv --template_dir=templates --output_dir=output
+python3 scripts/csv_validator.py --csv_file input/input.csv
+
+modified
+
+python3 scripts/serviceaccount/generate_k8s_yaml.py --csv_file input/serviceaccount/input.csv --template_dir=templates/serviceaccount --output_dir=output
+python3 scripts/serviceaccount/csv_validator.py --csv_file input/serviceaccount/input.csv
+
+
+python3 scripts/generate_k8s_yaml.py --csv_file input/input.csv --template_dir=templates --output_dir=output
+python3 scripts/csv_validator.py --csv_file input/input.csv
+
+modified
+
+python3 scripts/metallb/generate_k8s_yaml.py --csv_file input/metallb/input.csv --template_dir=templates/metallb --output_dir=output
+python3 scripts/metallb/csv_validator.py --csv_file input/metallb/input.csv

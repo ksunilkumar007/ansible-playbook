@@ -1,0 +1,14 @@
+---
+- name: Validate CSV and Generate Kubernetes YAMLs
+  hosts: localhost
+  gather_facts: no
+
+  tasks:
+    - name: Run ServiceAccount Tasks
+      include_tasks: tasks/serviceaccount/serviceaccount.yml
+      when: enable_serviceaccount | default(false) | bool
+
+
+    - name: Run MetalLB Tasks
+      include_tasks: tasks/metallb/metallb.yml
+      when: enable_metallb | default(false) | bool

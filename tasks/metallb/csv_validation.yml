@@ -1,0 +1,11 @@
+---
+# tasks/validate_csv.yml
+- name: Validate CSV File
+  command: "python3 {{ validation_script }} --csv_file {{ csv_file }}"
+  register: validation_result
+  ignore_errors: no  # Ensure task fails if validation fails
+
+- name: Fail if CSV validation fails
+  fail:
+    msg: "CSV validation failed: {{ validation_result.stderr }}"
+  when: validation_result.rc != 0

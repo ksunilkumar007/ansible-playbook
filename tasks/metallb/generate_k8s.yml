@@ -1,0 +1,11 @@
+---
+# tasks/generate_yaml.yml
+- name: Generate Kubernetes YAMLs
+  command: "python3 {{ python_script }} --csv_file {{ csv_file }} --template_dir {{ template_dir }} --output_dir {{ output_dir }}"
+  register: yaml_generation_result
+  ignore_errors: no  # Ensure task fails if YAML generation fails
+
+- name: Fail if YAML generation fails
+  fail:
+    msg: "YAML generation failed: {{ yaml_generation_result.stderr }}"
+  when: yaml_generation_result.rc != 0

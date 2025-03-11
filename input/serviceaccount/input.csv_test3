@@ -1,0 +1,3 @@
+cluster_name,namespace,service_account,role,role_binding,api_groups,verbs
+ukgcpe1,dev,dev-sa,role1,rolebinding1,"['v1', 'rbac.authorization.k8s.io']","['get', 'list']"
+ukgcpe1,dev,dev-sa,role1,rolebinding1,"['v1']","['create', 'update']"

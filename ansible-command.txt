@@ -1,0 +1,8 @@
+ansible-playbook -i localhost -c local main.yml -e csv_file=input/input.csv_test1
+
+
+modified
+
+ansible-playbook -i localhost main.yml -e "enable_serviceaccount=true"
+ansible-playbook -i localhost main.yml -e "enable_metallb=true"
+ansible-playbook -i localhost main.yml -e "enable_serviceaccount=true enable_metallb=true"
