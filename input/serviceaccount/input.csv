@@ -1,5 +1,3 @@
 env,cluster_name,namespace,service_account,role,role_binding,api_groups,verbs
-engineering,ukgcpe1,dev,dev-sa,role1,rolebinding1,"['v1', 'apps']","['get', 'list']"
-staging,ukgcpe1,uat,dev-sa,role2,rolebinding1,"['v1', 'batch']","['create', 'update']"
-engineering,ukgcpe2,dev,dev-sa,role1,rolebinding1,"['v1', 'apps']","['get', 'list']"
-staging,ukgcpe2,uat,dev-sa,role2,rolebinding1,"['v1', 'batch']","['create', 'update']"
+engineering,ukgcpe1,dev1,dev-sa,role1,rolebinding1,"['v1', 'rbac.authorization.k8s.io']","['get', 'list']"
+engineering,ukgcpe1,dev1,dev-sa,role1,rolebinding1,"['v2', 'rbac.authorization.k8s.io']","['get', 'list']"

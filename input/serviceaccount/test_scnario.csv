@@ -1,0 +1,57 @@
+env,cluster_name,namespace,service_account,role,role_binding,api_groups,verbs
+engineering,ukgcpe1,dev,dev-sa,role1,rolebinding1,"['v1', 'rbac.authorization.k8s.io']","['get', 'list']"
+engineering,ukgcpe1,dev,dev-sa,role1,rolebinding1,"['v2', 'rbac.authorization.k8s.io']","['create', 'delete']"
+
+1 namespace ,1 role ,1 rolebinding , 1 sa
+=========
+
+env,cluster_name,namespace,service_account,role,role_binding,api_groups,verbs
+engineering,ukgcpe1,dev,dev-sa,role1,rolebinding1,"['v1', 'rbac.authorization.k8s.io']","['get', 'list']"
+engineering,ukgcpe1,dev,dev-sa,role1,rolebinding2,"['v2', 'rbac.authorization.k8s.io']","['create', 'delete']"
+
+1 namespace ,1 role ,2 rolebinding , 1 sa
+=========
+
+env,cluster_name,namespace,service_account,role,role_binding,api_groups,verbs
+engineering,ukgcpe1,dev,dev-sa,role1,rolebinding1,"['v1', 'rbac.authorization.k8s.io']","['get', 'list']"
+engineering,ukgcpe1,dev,dev-sa,role2,rolebinding2,"['v2', 'rbac.authorization.k8s.io']","['create', 'delete']"
+
+1 namespace ,2 role ,2 rolebinding , 1 sa
+=========
+
+env,cluster_name,namespace,service_account,role,role_binding,api_groups,verbs
+engineering,ukgcpe1,dev,dev-sa,role1,rolebinding1,"['v1', 'rbac.authorization.k8s.io']","['get', 'list']"
+engineering,ukgcpe1,dev,dev-sa1,role2,rolebinding2,"['v2', 'rbac.authorization.k8s.io']","['create', 'delete']"
+
+1 namespace ,2 role ,2 rolebinding , 2 sa
+=========
+
+env,cluster_name,namespace,service_account,role,role_binding,api_groups,verbs
+engineering,ukgcpe1,dev,dev-sa,role1,rolebinding1,"['v1', 'rbac.authorization.k8s.io']","['get', 'list']"
+engineering,ukgcpe1,dev,dev-sa1,role2,rolebinding2,"['v2', 'rbac.authorization.k8s.io']","['create', 'delete']"
+
+2 namespace ,2 role ,2 rolebinding , 2 sa
+=========
+
+env,cluster_name,namespace,service_account,role,role_binding,api_groups,verbs
+engineering,ukgcpe1,dev,dev-sa,role1,rolebinding1,"['v1', 'rbac.authorization.k8s.io']","['get', 'list']"
+engineering,ukgcpe1,dev,dev-sa1,role1,rolebinding1,"['v2', 'rbac.authorization.k8s.io']","['create', 'delete']"
+
+1 namespace ,1 role ,1 rolebinding (having both sa as list) , 2 sa
+=========
+
+env,cluster_name,namespace,service_account,role,role_binding,api_groups,verbs
+engineering,ukgcpe1,dev,dev-sa,role1,rolebinding1,"['v1', 'rbac.authorization.k8s.io']","['get', 'list']"
+engineering,ukgcpe1,dev,dev-sa1,role1,rolebinding2,"['v2', 'rbac.authorization.k8s.io']","['create', 'delete']"
+
+1 namespace ,1 role ,2 rolebinding , 2 sa
+=========
+
+env,cluster_name,namespace,service_account,role,role_binding,api_groups,verbs
+engineering,ukgcpe1,dev,dev-sa,role1,rolebinding1,"['v1', 'rbac.authorization.k8s.io']","['get', 'list']"
+engineering,ukgcpe1,dev,dev-sa1,role1,rolebinding2,"['v2', 'rbac.authorization.k8s.io']","['create', 'delete']"
+engineering,ukgcpe2,dev,dev-sa,role1,rolebinding1,"['v1', 'rbac.authorization.k8s.io']","['get', 'list']"
+engineering,ukgcpe2,dev,dev-sa1,role1,rolebinding2,"['v2', 'rbac.authorization.k8s.io']","['create', 'delete']"
+
+2 cluster , 1 namespace ,1 role ,2 rolebinding , 2 sa
+=========
