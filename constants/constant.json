@@ -1,0 +1,10 @@
+{
+  "VALID_API_GROUPS": ["v1", "v2", "rbac.authorization.k8s.io"],
+  "VALID_VERBS": ["get", "list", "create", "delete"],
+  "VALID_ENV_CLUSTER_MAP": {
+    "engineering": ["ukgcpe1", "ukgcpe2"],
+    "staging": ["staging-cluster1", "staging-cluster2"],
+    "uat": ["uat-cluster1", "uat-cluster2"],
+    "production": ["prod-cluster1", "prod-cluster2"]
+  }
+}

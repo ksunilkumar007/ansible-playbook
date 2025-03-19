@@ -10,3 +10,5 @@ python3 scripts/metallb/csv_validator.py --csv_file input/metallb/input.csv
 
 python3 scripts/serviceaccount/generate_k8s_yaml.py --csv_file input/serviceaccount/input.csv --template_dir=templates/serviceaccount --output_dir=output
 python3 scripts/serviceaccount/csv_validator.py --csv_file input/serviceaccount/input.csv
+
+python3 scripts/serviceaccount/csv_validator2.py --csv_file input/serviceaccount/input.csv --json_file constants/constant.json
